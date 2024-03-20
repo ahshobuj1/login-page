@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 110vh;
+    background-image: url('./img/pexels-joris-neyt-1535100.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* * header area design starts here */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* * nav menu design starts here */
+
+.logo img {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffffaa;
+    border-radius: 50%;
+}
+.navigator a {
+    padding-right: 1rem;
+    color: #fff;
+    font-size: larger;
+    font-weight: 500;
+    position: relative;
+}
+
+/* ? */
+
+.navigator a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    border-radius: 5px;
+    left: -9px;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    /* transform-origin: left; */
+}
+.navigator a:hover:after {
+    transform: scaleX(1);
+}
+.btnLogin_popup {
+    width: 120px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    border: 2px solid #fff;
+    border-radius: 0.2rem;
+    font-size: 1.1rem;
+    background: transparent;
+    transition: all 0.5s;
+}
+.btnLogin_popup:hover {
+    background: white;
+    color: #000000de;
+}
+
+/** login area design starts here */
+
+.wrapper {
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ffffff80;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px 4px #00ffff53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    transition: height 0.4s;
+    transform: scale(0);
+    /* display: none; */
+}
+.form_box {
+    width: 100%;
+    padding: 30px;
+}
+.form_box h2 {
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: center;
+}
+.input_box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(247, 243, 243);
+    margin: 30px 0;
+}
+.input_box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0abccf;
+    transition: 0.4s;
+}
+.input_box input {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: text;
+    padding: 10px 30px 0px 0px;
+}
+
+.input_box input:focus ~ label,
+.input_box input:valid ~ label {
+    top: -5px;
+}
+.input_box .icon {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: #fff;
+}
+
+/* * checkbox style */
+
+.remember_forget {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input[type='checkbox'] {
+    accent-color: #10cd10;
+    border: none;
+    outline: none;
+}
+.remember_forget a {
+    color: blueviolet;
+    font-size: 1.1rem;
+}
+.remember_forget a:hover {
+    text-decoration: underline;
+}
+
+/* * btn style */
+
+.btn {
+    width: 100%;
+    height: 50px;
+    background-color: #1ce4fa;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 15px 0 15px 0;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: #fff;
+}
+.login_register {
+    font-size: 1.1rem;
+}
+.login_register a {
+    color: blueviolet;
+    font-size: 1.2rem;
+}
+.login_register a:hover {
+    text-decoration: underline;
+}
+
+/* * close icon */
+
+.icon_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    padding: 8px;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    border-bottom-left-radius: 50%;
+}
+
+/* * css for js */
+
+.added {
+    display: none;
+}
+
+.registration_height {
+    height: 540px;
+}
+
+.Wrapper_OpenClose {
+    transform: scale(1);
+    /* display: block; */
+}
